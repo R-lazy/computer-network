@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盲盒</title>
+</head>
+
+
+
+<body>
+    <input type="button" value="换一张" onclick="changeImg()">
+    <br>
+    <img src="box/0.jpg" id="img1" height="500">
+
+
+    <script>
+        function changeImg(){
+            alert("要切换了")
+            var num = getNumber();
+
+            document.getElementById("img1").src="box/"+num+".jpg";
+            
+        }
+        function getNumber() {
+
+            var minNumber = 0; // The minimum number you want
+
+            var maxNumber = 9; // The maximum number you want
+
+            var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Generates a random number
+            return randomnumber;
+        }
+    </script>
+
+
+</body>
+
+
